@@ -71,14 +71,14 @@ body {
   background-color: #52ffffed;
   color: black;
   border: 2px solid #2b6fec;
-  margin-top: auto; /* Расположит кнопку внизу */
-  margin-bottom: 20px; /* Добавляет отступ снизу */
+  margin-top: auto; /* places the button down */
+  margin-bottom: 20px; /* adds bottom margin */
   font-size: 20px;
 }
 
 .button:hover {
   box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.6);
-  animation: hoverUp 0.5s forwards;
+  animation: hoverUp 0.5s forwards; /*hoverUp - keyframes animation*/
 }
 
 .column:hover{
@@ -109,9 +109,55 @@ body {
   background-color: #026179ed;
 }
 
+#darkModeToggle:hover {
+  box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.6);
+}
+
+/* Styles for Dark Mode */
+body.dark-mode {
+  background-color: #1d1f21 !important;
+  color: #dfdfdf;
+}
+
+.navbar-inverse.dark-mode {
+  background-color: #343a40;
+}
+
+.container-fluid.dark-mode {
+  background-color: #520303;
+}
+
+.activepage.dark-mode {
+  background-color: #360303ed;
+}
+
+.greeting.dark-mode {
+  background-color: #520303;
+  color: #dfdfdf;
+}
+
+.column.dark-mode {
+  border-color: #be0808;
+}
+ 
+.flex-container.dark-mode {
+  background-color: #2f3136;
+}
+
+.button.dark-mode {
+  background-color: #4d4b4b;
+  border-color: #be0808;
+  color: #dfdfdf;
+}
+
+.button.dark-mode:hover {
+  background-color: #880808;
+}
+/**/
+
 @keyframes hoverUp {
-  0% {transform: translateY(0) translateX(0) ;}
-  100% {transform: translateY(-10px) translateX(-1px) scale(1.02);}
+  0% {transform: translateY(0) translateX(0) ;}   /*animation starts*/
+  100% {transform: translateY(-10px) translateX(-1px) scale(1.02);} /*animation ends*/
 }
 
 /* Responsive layout - makes a two column-layout instead of four columns */
