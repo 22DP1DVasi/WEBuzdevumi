@@ -2,22 +2,35 @@
   box-sizing: border-box;
 }
 
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  /* background-image: linear-gradient(#63f6f8, #9ce3ff); */
+  background-image: url("/img/background.png"); /* The image used */
+  height: 500px; /* You must set a specified height */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+}
+
 body {
-  background-color: #dbf5ff !important;
-  font-family: Arial;
+  display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 .flex-container {
-  background-color: #bffeff;
-  flex-direction: row;
-  font-size: 30px;
-  text-align: center;
+  flex: 1;
   display: flex;
-  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
   padding: 0 4px;
+  /* background-image: linear-gradient(#63f6f8, #9ce3ff); */
+  flex-wrap: wrap;
   column-gap: 10px;
   align-items: stretch;
-  height: 100%;
 }
 
 .column {
@@ -25,8 +38,8 @@ body {
   flex-direction: column;
   justify-content: flex-start;
   margin: 20px auto;
-  flex: 25%;
-  max-width: 1200px;
+  flex: 1 1 25%;
+  max-width: 500px;
   padding: 0 4px;
   gap: 20px;
   border: 5px solid #007c9ced;
@@ -98,7 +111,9 @@ body {
 
 .recommendations {
   padding-top: 2%;
-  font-size: 150%;
+  font-size: 190%;
+  margin-left: 2%;
+  margin-bottom: 1%;
 }
 
 .container-fluid {
@@ -109,13 +124,22 @@ body {
   background-color: #026179ed;
 }
 
+.footer {
+  background-color: #007c9ced;
+    text-align: center;
+    padding: 10px 0;
+    color: white;
+    width: 100%;
+    margin-top: auto;
+}
+
 #darkModeToggle:hover {
   box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.6);
 }
 
 /* Styles for Dark Mode */
 body.dark-mode {
-  background-color: #1d1f21 !important;
+  background-image: linear-gradient(to bottom right, #292828, #0c0a0a);
   color: #dfdfdf;
 }
 
@@ -141,7 +165,7 @@ body.dark-mode {
 }
  
 .flex-container.dark-mode {
-  background-color: #2f3136;
+  background-image: linear-gradient(#454546, #151516);
 }
 
 .button.dark-mode {
