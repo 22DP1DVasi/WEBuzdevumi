@@ -31,6 +31,8 @@ document.addEventListener('DOMContentLoaded', function() {
         document.querySelectorAll('.button').forEach(function(button) {
             button.classList.add('dark-mode');
         });
+        document.querySelector('.footer').classList.add('dark-mode');
+        document.querySelector('.navbar-dropdown-button').classList.add('dark-mode');
 
         localStorage.setItem('dark-mode', 'enabled'); // Save to local storage
     }
@@ -48,6 +50,8 @@ document.addEventListener('DOMContentLoaded', function() {
         document.querySelectorAll('.button').forEach(function(button) {
             button.classList.remove('dark-mode');
         });
+        document.querySelector('.footer').classList.remove('dark-mode');
+        document.querySelector('.navbar-dropdown-button').classList.remove('dark-mode');
 
         localStorage.setItem('dark-mode', 'disabled'); // Save to local storage
     }

@@ -7,8 +7,7 @@ html, body {
   margin: 0;
   display: flex;
   flex-direction: column;
-  /* background-image: linear-gradient(#63f6f8, #9ce3ff); */
-  background-image: url("/img/background.png"); /* The image used */
+  background-image: linear-gradient(to bottom right ,#63f6f8, #9ce3ff);
   height: 500px; /* You must set a specified height */
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
@@ -17,8 +16,8 @@ html, body {
 
 body {
   display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 .flex-container {
@@ -27,7 +26,7 @@ body {
   justify-content: center;
   align-items: stretch;
   padding: 0 4px;
-  /* background-image: linear-gradient(#63f6f8, #9ce3ff); */
+  background-image: linear-gradient(#63f6f8, #9ce3ff);
   flex-wrap: wrap;
   column-gap: 10px;
   align-items: stretch;
@@ -107,6 +106,7 @@ body {
   font-weight: bold;
   background-color: #007c9ced;
   color: #e2fdff;
+  padding-top: 10px;
 }
 
 .recommendations {
@@ -126,11 +126,69 @@ body {
 
 .footer {
   background-color: #007c9ced;
-    text-align: center;
-    padding: 10px 0;
-    color: white;
-    width: 100%;
-    margin-top: auto;
+  text-align: center;
+  padding: 10px 0;
+  width: 100%;
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.footer ul li {
+  margin: 0 10px; 
+}
+
+.footer a {
+  color: #e2fdff;
+  transition: color 0.3s ease;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: #aacacf;
+  text-decoration: underline;
+}
+
+/*change Bootstrap dropdown*/
+.navbar-dropdown-button {
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  font-size: 100%;
+}
+
+.navbar-dropdown-button:hover {
+  background-color: #2598b4ed !important;
+}
+
+.navbar-custom-dropdown {
+  background-color: #ffffffed !important;
+  border: 2px solid #2598b4ed !important;
+  border-radius: 5px;
+  min-width: 200px;
+  padding: 10px 0;
+}
+
+.navbar-custom-dropdown li a {
+  color: #000000;
+  padding: 10px 20px;
+  text-decoration: none;
+}
+
+.navbar-custom-dropdown li a:hover {
+  background-color: #04AA6D;
+  color: #fff;
 }
 
 #darkModeToggle:hover {
@@ -139,7 +197,7 @@ body {
 
 /* Styles for Dark Mode */
 body.dark-mode {
-  background-image: linear-gradient(to bottom right, #292828, #0c0a0a);
+  background-image: linear-gradient(to bottom right, #2e2e2e, #070606);
   color: #dfdfdf;
 }
 
@@ -161,11 +219,11 @@ body.dark-mode {
 }
 
 .column.dark-mode {
-  border-color: #be0808;
+  border-color: #8f0606;
 }
  
 .flex-container.dark-mode {
-  background-image: linear-gradient(#454546, #151516);
+  background-image: linear-gradient(#2e2e2e, #070606);
 }
 
 .button.dark-mode {
@@ -177,6 +235,25 @@ body.dark-mode {
 .button.dark-mode:hover {
   background-color: #880808;
 }
+
+.footer.dark-mode {
+  background-color: #520303;
+}
+
+.footer.dark-mode a {
+  color: #dfdfdf;
+}
+
+.footer.dark-mode a:hover {
+  color: #ffffff;
+}
+
+.navbar-dropdown-button.dark-mode {
+  background-color: #520303 !important;
+  color: #dfdfdf !important;
+}
+
+
 /**/
 
 @keyframes hoverUp {
@@ -216,4 +293,14 @@ body.dark-mode {
   font-size: 50px;
   font-size: 5vw;
 }
+
+.footer ul {
+  flex-direction: column; /* Перестройка в колонку на маленьких экранах */
+  align-items: center; /* Центрирует элементы списка */
+}
+
+.footer ul li {
+  margin: 5px 0; /* Уменьшаем отступы для компактности */
+}
+
 }

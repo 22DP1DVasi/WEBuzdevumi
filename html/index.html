@@ -25,9 +25,15 @@
             <!-- Navbar contents -->
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav">
-                    <li class="activepage navbar-button"><a href="#" style="color:white">Home</a></li>
-                    <li><a href="#" style="color:white">Page 1</a></li>
-                    <li><a href="#" style="color:white">Page 2</a></li>
+                    <li class="activepage navbar-button"><a href="#" style="color:white;">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle navbar-dropdown-button" data-toggle="dropdown" style="color: white; background-color: #007c9ced;">Music <span class="caret"></span></a>
+                        <ul class="dropdown-menu navbar-custom-dropdown">
+                            <li><a href="#">Explore</a></li>
+                            <li><a href="#">Live</a></li>
+                        </ul>
+                    </li>
+                </ul>
                 </ul>
                 <form class="navbar-form navbar-left" action="/action_page.php">
                     <div class="form-group">
@@ -39,7 +45,7 @@
                     <li><a href="#" class="navbar-button" style="color:white"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
                     <li><a href="#" class="navbar-button" style="color:white"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
                     <li><button id="darkModeToggle" class="btn btn-default navbar-btn">
-                      <img src="../img/darkmodefavicon.png" alt="Dark Mode Favicon" width="22" height="22">
+                    <img src="../img/darkmodefavicon.png" alt="Dark Mode Favicon" width="22" height="22">
                     </button></li>
                 </ul>
             </div>
@@ -78,8 +84,16 @@
     </div>
     
     <footer class="footer">
-        <p>Author: Hege Refsnes<br>
-        <a href="mailto:hege@example.com">hege@example.com</a></p>
+        <ul>
+            <li><a href="#">FAQ</a></p></li>
+            <li><a href="#">User Agreement</a></p></li>
+            <li><a href="#">Rules</a></p></li>
+        </ul>
+        <ul>
+            <li><a href="#">Copyright</a></p></li>
+            <li><a href="#">Privacy Policy</a></p></li>
+            <li><a href="#">Terms of Service</a></p></li>
+        </ul>
     </footer>
 
     <script src="../src/js/darkmode.js"></script>
