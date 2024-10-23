@@ -187,12 +187,19 @@ body {
 }
 
 .navbar-custom-dropdown li a:hover {
-  background-color: #04AA6D;
-  color: #fff;
+  background-color: #e9e9e9 !important;
 }
 
 #darkModeToggle:hover {
   box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.6);
+}
+
+.navbar-button.dark-mode:hover {
+  background-color: #04dd21 ;
+}
+
+.navbar-button:hover {
+  background-color: #10cccced !important;
 }
 
 /* Styles for Dark Mode */
@@ -250,9 +257,19 @@ body.dark-mode {
 
 .navbar-dropdown-button.dark-mode {
   background-color: #520303 !important;
-  color: #dfdfdf !important;
+  color: #ffffff !important;
 }
 
+.navbar-custom-dropdown.dark-mode {
+  background-color: #242323ed !important;
+  border: 2px solid #880808 !important;
+}
+
+.navbar-custom-dropdown.dark-mode li a {
+  color: white;
+}
+
+ 
 
 /**/
 

@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
         document.querySelector('.greeting').classList.add('dark-mode');
         document.querySelector('.flex-container').classList.add('dark-mode');
         document.querySelector('.container-fluid').classList.add('dark-mode');
-        document.querySelector('.activepage').classList.add('dark-mode');
+        // document.querySelector('.activepage').classList.add('dark-mode');
         document.querySelectorAll('.column').forEach(function(column) {
             column.classList.add('dark-mode');
         });
@@ -32,7 +32,9 @@ document.addEventListener('DOMContentLoaded', function() {
             button.classList.add('dark-mode');
         });
         document.querySelector('.footer').classList.add('dark-mode');
-        document.querySelector('.navbar-dropdown-button').classList.add('dark-mode');
+        // document.querySelector('.navbar-dropdown-button').classList.add('dark-mode');
+        // document.querySelector('.navbar-custom-dropdown').classList.add('dark-mode');
+        document.querySelector('.navbar-button').classList.add('dark-mode');
 
         localStorage.setItem('dark-mode', 'enabled'); // Save to local storage
     }
@@ -43,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function() {
         document.querySelector('.greeting').classList.remove('dark-mode');
         document.querySelector('.flex-container').classList.remove('dark-mode');
         document.querySelector('.container-fluid').classList.remove('dark-mode');
-        document.querySelector('.activepage').classList.remove('dark-mode');
+        // document.querySelector('.activepage').classList.remove('dark-mode');
         document.querySelectorAll('.column').forEach(function(column) {
             column.classList.remove('dark-mode');
         });
@@ -51,7 +53,9 @@ document.addEventListener('DOMContentLoaded', function() {
             button.classList.remove('dark-mode');
         });
         document.querySelector('.footer').classList.remove('dark-mode');
-        document.querySelector('.navbar-dropdown-button').classList.remove('dark-mode');
+        // document.querySelector('.navbar-dropdown-button').classList.remove('dark-mode');
+        // document.querySelector('.navbar-custom-dropdown').classList.remove('dark-mode');
+        document.querySelector('.navbar-button').classList.remove('dark-mode');
 
         localStorage.setItem('dark-mode', 'disabled'); // Save to local storage
     }
