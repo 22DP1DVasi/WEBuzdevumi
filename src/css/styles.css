@@ -3,12 +3,16 @@
 }
 
 html, body {
-  height: 100%;
   margin: 0;
+  padding: 0;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background-image: linear-gradient(to bottom right ,#63f6f8, #9ce3ff);
-  height: 500px; /* You must set a specified height */
+  background-image: linear-gradient(to bottom left ,#63f6f8, #9ce3ff);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* height: 500px; You must set a specified height */
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover; /* Resize the background image to cover the entire container */
@@ -26,7 +30,7 @@ body {
   justify-content: center;
   align-items: stretch;
   padding: 0 4px;
-  background-image: linear-gradient(#63f6f8, #9ce3ff);
+  /* background-image: linear-gradient(#63f6f8, #9ce3ff); */
   flex-wrap: wrap;
   column-gap: 10px;
   align-items: stretch;
@@ -120,9 +124,9 @@ body {
   background-color: #007c9ced;
 }
 
-.activepage {
+/* .activepage {
   background-color: #026179ed;
-}
+} */
 
 .footer {
   background-color: #007c9ced;
@@ -190,16 +194,12 @@ body {
   background-color: #e9e9e9 !important;
 }
 
+.dropdown-toggle {
+  background-color: #007c9ced !important;
+}
+
 #darkModeToggle:hover {
   box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.6);
-}
-
-.navbar-button.dark-mode:hover {
-  background-color: #04dd21 ;
-}
-
-.navbar-button:hover {
-  background-color: #10cccced !important;
 }
 
 /* Styles for Dark Mode */
@@ -269,7 +269,13 @@ body.dark-mode {
   color: white;
 }
 
- 
+.navbar-button.dark-mode:hover {
+  background-color: #04dd21 !important;
+}
+
+.navbar-button.dark-mode {
+  background-color: #096e16 !important;
+}
 
 /**/
 
