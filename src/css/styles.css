@@ -172,6 +172,10 @@ body {
   font-size: 100%;
 }
 
+.navbar-button:hover {
+  background-color: #2598b4ed !important;
+}
+
 .navbar-dropdown-button:hover {
   background-color: #2598b4ed !important;
 }
@@ -201,6 +205,28 @@ body {
 #darkModeToggle:hover {
   box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.6);
 }
+
+/* For Music-Explore page */
+.explore-header {
+  text-align: center;
+  padding: 20px;
+  background-color: #007c9ced;
+  color: #ffffff;
+  font-size: 2em;
+}
+
+.genre-section {
+  margin: 40px 0;
+}
+
+.genre-title {
+  font-size: 2em;
+  text-align: center;
+  color: #007c9ced;
+  margin-bottom: 20px;
+}
+
+/* For Music-Explore page */
 
 /* Styles for Dark Mode */
 body.dark-mode {
@@ -270,11 +296,11 @@ body.dark-mode {
 }
 
 .navbar-button.dark-mode:hover {
-  background-color: #04dd21 !important;
+  background-color: #740505 !important;
 }
 
-.navbar-button.dark-mode {
-  background-color: #096e16 !important;
+.navbar-dropdown-button.dark-mode:hover {
+  background-color: #740505 !important;
 }
 
 /**/
