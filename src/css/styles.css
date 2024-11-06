@@ -30,7 +30,6 @@ body {
   justify-content: center;
   align-items: stretch;
   padding: 0 4px;
-  /* background-image: linear-gradient(#63f6f8, #9ce3ff); */
   flex-wrap: wrap;
   column-gap: 10px;
   align-items: stretch;
@@ -253,10 +252,6 @@ body.dark-mode {
 
 .column.dark-mode {
   border-color: #8f0606;
-}
- 
-.flex-container.dark-mode {
-  background-image: linear-gradient(#2e2e2e, #070606);
 }
 
 .button.dark-mode {

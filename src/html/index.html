@@ -8,75 +8,99 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch('templates/header.html')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Header file not found');
+                    }
+                    return response.text();
+                })
+                .then(data => {
+                    document.getElementById('header').innerHTML = data;
+    
+                    // Проверка, если dark mode не был инициализирован
+                    if (!document.querySelector('#darkModeToggle')) {
+                        const darkModeScript = document.createElement('script');
+                        darkModeScript.src = "../js/darkmode.js";
+                        document.body.appendChild(darkModeScript);
+                    }
+                })
+                .catch(error => {
+                    console.error('Header not loaded:', error);
+                });
+        });
+    </script>
 </head>
 <body>
-    <nav class="navbar navbar-inverse">
-        <div class="container-fluid">
-            <!-- Button to display menu on small screens -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar"> <!-- responsible for displaying the menu in a collapsed form on mobile devices. -->
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <img src="../src/images/logo.png" alt="Logo" width="50" height="50">
-            </div>
-
-            <!-- Navbar contents -->
-            <div class="collapse navbar-collapse" id="myNavbar">
-                <ul class="nav navbar-nav">
-                    <li class="activepage navbar-button"><a href="#" style="color:white">Home</a></li>
-                    <li><a href="#" style="color:white">Page 1</a></li>
-                    <li><a href="#" style="color:white">Page 2</a></li>
-                </ul>
-                <form class="navbar-form navbar-left" action="/action_page.php">
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Search" name="search">
-                    </div>
-                    <button type="submit" class="btn btn-default">Submit</button>
-                </form>
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#" class="navbar-button" style="color:white"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-                    <li><a href="#" class="navbar-button" style="color:white"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-                    <li><button id="darkModeToggle" class="btn btn-default navbar-btn">Dark Mode</button></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+    <div id="header"></div>
 
     <div class="greeting">
         <p>Abandon hope, all ye who enter here.</p>
     </div>
 
     <div class="recommendations">
-        <ul>
-            <li>Last recommendations:</li>
-        </ul>
+        <p>Last recommendations:</p>
     </div>
 
     <div class="flex-container">
         <div class="column">
-            <img src="../src/images/linkinpark.jpg" alt="Android" width="200" height="200">
+            <img src="../../img/linkinpark.jpg" alt="Linkin Park" width="200" height="200">
             <h1>Linkin Park</h1>
             <p>One of the biggest rock and metal bands in the world.</p>
             <button class="button">Listen</button>
         </div>
 
         <div class="column">
-            <img src="../src/images/celldweller.jpg" alt="Apple" width="200" height="200">
+            <img src="../../img/celldweller.jpg" alt="Celldweller" width="200" height="200">
             <h1>Celldweller</h1>
             <p>Main electro-industrial-rock musician of 2000s.</p>
             <button class="button">Listen</button>
         </div>
 
         <div class="column">
-            <img src="../src/images/tallah.jpeg" alt="Huawei" width="200" height="200">
+            <img src="../../img/tallah.jpeg" alt="Tallah" width="200" height="200">
             <h1>Tallah</h1>
             <p>Representative of modern nu-metal.</p>
             <button class="button">Listen</button>
         </div>
     </div>
 
-    <script src="../js/darkmode.js"></script>
+    <div class="flex-container">
+        <div class="column">
+            <img src="../../img/linkinpark.jpg"" alt="Linkin Park" width="200" height="200">
+            <h1>Linkin Park</h1>
+            <p>One of the biggest rock and metal bands in the world.</p>
+            <button class="button">Listen</button>
+        </div>
+
+        <div class="column">
+            <img src="../../img/celldweller.jpg" alt="Celldweller" width="200" height="200">
+            <h1>Celldweller</h1>
+            <p>Main electro-industrial-rock musician of 2000s.</p>
+            <button class="button">Listen</button>
+        </div>
+
+        <div class="column">
+            <img src="../../img/tallah.jpeg" alt="Tallah" width="200" height="200">
+            <h1>Tallah</h1>
+            <p>Representative of modern nu-metal.</p>
+            <button class="button">Listen</button>
+        </div>
+    </div>
+    
+    <footer class="footer">
+        <ul>
+            <li><a href="#">FAQ</a></p></li>
+            <li><a href="#">User Agreement</a></p></li>
+            <li><a href="#">Rules</a></p></li>
+        </ul>
+        <ul>
+            <li><a href="#">Copyright</a></p></li>
+            <li><a href="#">Privacy Policy</a></p></li>
+            <li><a href="#">Terms of Service</a></p></li>
+        </ul>
+    </footer>
 </body>
 </html>

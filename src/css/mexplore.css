@@ -1,121 +1,81 @@
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+/* Genre Scroll Bar */
+.genre-scroll-bar {
+    background-color: #f0f0f0;
+    padding: 10px 0;
+    overflow-x: auto;
+    white-space: nowrap;
+    border-bottom: 2px solid #d0d0d0;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+.scroll-container {
     display: flex;
-    flex-direction: column;
+    justify-content: flex-start;
     align-items: center;
-}
-
-.explore-title {
-    font-size: 24px;
-    font-weight: bold;
-    margin: 20px;
-    text-align: center;
-}
-
-.genre-grid {
-    display: flex;
-    flex-wrap: wrap;
     gap: 10px;
-    width: 80%;
-    max-width: 1200px;
-    justify-content: center;
+    padding: 0 20px;
 }
 
-.genre-card {
-    position: relative;
-    background-size: cover;
-    background-position: center;
-    height: 300px;
-    width: 100%;
-    max-width: 600px;
-    display: flex;
-    align-items: flex-end;
-    color: white;
-    overflow: hidden;
-}
-
-.genre-info {
-    background: rgba(0, 0, 0, 0.6);
-    padding: 20px;
-    width: 100%;
-}
-
-.genre-info h3 {
-    margin: 0;
-    font-size: 24px;
-}
-
-.genre-info p {
-    font-size: 14px;
-}
-
-.more-button {
-    margin-top: 10px;
-    padding: 8px 12px;
-    background-color: #fff;
-    color: #333;
+.genre-button {
+    background-color: #007c9ced;
+    color: #ffffff;
     border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 16px;
     cursor: pointer;
-    font-size: 12px;
+    transition: background-color 0.3s ease;
 }
 
-.genre-item {
-    position: relative;
-    background-size: cover;
-    background-position: center;
-    color: white;
-    font-size: 18px;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 150px;
-    width: 30%;
-    max-width: 180px;
-    text-transform: uppercase;
-    flex: 1 1 30%;
+.genre-button:hover {
+    background-color: #2598b4ed;
 }
 
-.genre-item::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
+/* Release Cards Section */
+.explore-releases {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
 }
 
-.genre-item:hover::before {
-    background: rgba(0, 0, 0, 0.7);
+.release-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    transition: transform 0.2s ease;
+    text-align: center;
+    padding: 15px;
 }
 
-/* Стили для горизонтального слайдера на экранах 760px и меньше */
-@media (max-width: 760px) {
-    .genre-grid {
-        display: flex;
-        flex-wrap: nowrap; /* Убираем перенос */
-        overflow-x: auto; /* Добавляем горизонтальную прокрутку */
-        gap: 10px;
-        /* padding-left: 10px; Отступ слева для видимости первой карточки */
-        /* scroll-snap-type: x mandatory; Включаем эффект привязки */
-    }
+.release-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+}
 
-    .genre-item {
-        min-width: 80%; /* Карточка занимает 80% ширины экрана */
-        flex: 0 0 auto; /* Предотвращаем изменение ширины карточки */
-        /* scroll-snap-align: start; Карточки выравниваются по началу при прокрутке */
-    }
+.album-cover {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
 
-    /* Стили для скрытия стандартной полосы прокрутки (опционально) */
-    .genre-grid::-webkit-scrollbar {
-        display: none;
-    }
+.release-info h3 {
+    font-size: 1.2em;
+    margin: 10px 0 5px;
+}
+
+.release-info p {
+    font-size: 1em;
+    color: #777777;
+    margin: 0;
+}
+
+.genre-label {
+    display: inline-block;
+    margin-top: 8px;
+    padding: 5px 10px;
+    font-size: 0.9em;
+    color: #ffffff;
+    background-color: #007c9ced;
+    border-radius: 5px;
 }
