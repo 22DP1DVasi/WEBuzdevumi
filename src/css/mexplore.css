@@ -1,10 +1,33 @@
-/* Genre Scroll Bar */
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+    padding-top: 20px;
+}
+
+/* Genre scroll bar */
 .genre-scroll-bar {
     background-color: #f0f0f0;
     padding: 10px 0;
     overflow-x: auto;
     white-space: nowrap;
     border-bottom: 2px solid #d0d0d0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000; /* Make sure it stays above other elements */
 }
 
 .scroll-container {
@@ -30,52 +53,74 @@
     background-color: #2598b4ed;
 }
 
-/* Release Cards Section */
-.explore-releases {
+/* Main container */
+.container {
+    padding-top: 70px; /* Adjust this value to match the height of the genre-scroll-bar */
+}
+
+h1 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Releases grid */
+.releases-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(6, 1fr); /* 6 cards per row */
     gap: 20px;
     padding: 20px;
 }
 
+/* Release card */
 .release-card {
     background-color: #ffffff;
     border-radius: 10px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     overflow: hidden;
-    transition: transform 0.2s ease;
     text-align: center;
-    padding: 15px;
+    padding: 10px;
+    transition: transform 0.2s ease;
 }
 
 .release-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
 }
 
-.album-cover {
+.release-card img {
     width: 100%;
     height: auto;
     border-radius: 8px;
 }
 
-.release-info h3 {
-    font-size: 1.2em;
-    margin: 10px 0 5px;
+.release-card h3 {
+    font-size: 1em;
+    margin: 8px 0 4px;
 }
 
-.release-info p {
-    font-size: 1em;
+.release-card p {
+    font-size: 0.9em;
     color: #777777;
     margin: 0;
 }
 
-.genre-label {
-    display: inline-block;
-    margin-top: 8px;
-    padding: 5px 10px;
-    font-size: 0.9em;
-    color: #ffffff;
-    background-color: #007c9ced;
-    border-radius: 5px;
+.release-card span {
+    font-size: 0.8em;
+    color: #999999;
+}
+
+/* "View all new releases" link */
+.view-more {
+    text-align: center;
+    padding: 20px;
+}
+
+.view-more a {
+    color: #007c9ced;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.view-more a:hover {
+    text-decoration: underline;
 }
