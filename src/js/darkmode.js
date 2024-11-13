@@ -1,24 +1,46 @@
+console.log("darkmode.js подключен");
 document.addEventListener('DOMContentLoaded', function() {
     const toggleButton = document.getElementById('darkModeToggle');
-    const body = document.body;
-
-    // Checking the saved mode in localStorage
-    const currentMode = localStorage.getItem('dark-mode');
-    if (currentMode === 'enabled') {
-        enableDarkMode();
+    if (!toggleButton) {
+        console.error("Кнопка darkModeToggle не найдена");
+        return;
+    }
+    // Функция ожидания появления кнопки
+    function waitForToggleButton() {
+        const toggleButton = document.getElementById('darkModeToggle');
+        
+        if (toggleButton) {
+            initializeDarkMode(toggleButton);
+        } else {
+            // Пробуем снова через 100 мс, если toggleButton не найден
+            setTimeout(waitForToggleButton, 100);
+        }
     }
 
-    // Button click handler
-    toggleButton.addEventListener('click', function() {
-        const darkModeEnabled = body.classList.contains('dark-mode');
-        if (darkModeEnabled) {
-            disableDarkMode();
-        } else {
+    // Основная функция инициализации темного режима
+    function initializeDarkMode(toggleButton) {
+        const body = document.body;
+
+        // Проверка сохраненного состояния
+        const currentMode = localStorage.getItem('dark-mode');
+        if (currentMode === 'enabled') {
             enableDarkMode();
         }
-    });
+
+        // Обработчик для переключения
+        toggleButton.addEventListener('click', function() {
+            const darkModeEnabled = body.classList.contains('dark-mode');
+            if (darkModeEnabled) {
+                disableDarkMode();
+            } else {
+                enableDarkMode();
+            }
+        });
+    }
 
     function enableDarkMode() {
+        console.log(document.querySelector('.navbar-inverse')); // Должен показать элемент navbar
+        console.log(document.querySelector('.greeting')); // Должен показать элемент greeting
         body.classList.add('dark-mode');
         document.querySelector('.navbar-inverse').classList.add('dark-mode');
         document.querySelector('.greeting').classList.add('dark-mode');

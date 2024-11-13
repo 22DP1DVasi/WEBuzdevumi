@@ -20,12 +20,10 @@
                 .then(data => {
                     document.getElementById('header').innerHTML = data;
     
-                    // Проверка, если dark mode не был инициализирован
-                    if (!document.querySelector('#darkModeToggle')) {
-                        const darkModeScript = document.createElement('script');
-                        darkModeScript.src = "../js/darkmode.js";
-                        document.body.appendChild(darkModeScript);
-                    }
+                    // Добавляем скрипт darkmode.js после загрузки header.html
+                    const darkModeScript = document.createElement('script');
+                    darkModeScript.src = "../../src/js/darkmode.js";
+                    document.body.appendChild(darkModeScript);
                 })
                 .catch(error => {
                     console.error('Header not loaded:', error);

@@ -1,42 +1,53 @@
-<nav class="navbar navbar-inverse">
-    <div class="container-fluid">
-        <!-- Button to display menu on small screens -->
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar"> <!-- responsible for displaying the menu in a collapsed form on mobile devices. -->
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <img src="../../img/logo.png" alt="Logo" width="50" height="50">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../src/css/styles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>Header with Dark Mode</title>
+</head>
+<body>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <img src="../../../img/logo.png" alt="Logo" width="50" height="50">
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li class="navbar-button"><a href="#" style="color:white;">Home</a></li>
+                    <li>
+                        <a href="#" class="dropdown-toggle navbar-dropdown-button" data-toggle="dropdown" style="color: white;">Music <span class="caret"></span></a>
+                        <ul class="dropdown-menu navbar-custom-dropdown">
+                            <li><a href="../html/pages/music_explore.html">Explore</a></li>
+                            <li><a href="#">Live</a></li>
+                        </ul>
+                    </li>
+                    <li class="navbar-button"><a href="#" style="color:white;">Charts</a></li>
+                </ul>
+                <form class="navbar-form navbar-left" action="/action_page.php">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search" name="search">
+                    </div>
+                    <button type="submit" class="btn btn-default">Submit</button>
+                </form>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#" style="color:white"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                    <li><a href="#" style="color:white"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                    <li>
+                        <button id="darkModeToggle" class="btn btn-default navbar-btn">
+                            <img src="../../../img/darkmodefavicon.png" alt="Dark Mode Favicon" width="22" height="22">
+                        </button>
+                    </li>
+                </ul>
+            </div>
         </div>
-
-        <!-- Navbar contents -->
-        <div class="collapse navbar-collapse" id="myNavbar">
-            <ul class="nav navbar-nav">
-                
-                <li class="navbar-button"><a href="#" class="navbar-button" style="color:white;">Home</a></li>
-                <li>
-                    <a href="#" class="dropdown-toggle navbar-dropdown-button" data-toggle="dropdown" style="color: white;">Music <span class="caret"></span></a>
-                    <ul class="dropdown-menu navbar-custom-dropdown">
-                        <li><a href="../html/pages/music_explore.html">Explore</a></li>
-                        <li><a href="#">Live</a></li>
-                    </ul>
-                </li>
-                <li class="navbar-button"><a href="#" style="color:white;">Charts</a></li>
-            </ul>
-            <form class="navbar-form navbar-left" action="/action_page.php">
-                <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Search" name="search">
-                </div>
-                <button type="submit" class="btn btn-default">Submit</button>
-            </form>
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="#" class="navbar-button" style="color:white"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-                <li><a href="#" class="navbar-button" style="color:white"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-                <li><button id="darkModeToggle" class="btn btn-default navbar-btn">
-                <img src="../../img/darkmodefavicon.png" alt="Dark Mode Favicon" width="22" height="22">
-                </button></li>
-            </ul>
-        </div>
-    </div>
-</nav>
+    </nav>
+    <script src="../../src/js/darkmode.js"></script>
+</body>
+</html>
