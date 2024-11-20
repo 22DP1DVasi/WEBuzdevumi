@@ -8,28 +8,6 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            fetch('templates/header.html')
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error('Header file not found');
-                    }
-                    return response.text();
-                })
-                .then(data => {
-                    document.getElementById('header').innerHTML = data;
-    
-                    // Добавляем скрипт darkmode.js после загрузки header.html
-                    const darkModeScript = document.createElement('script');
-                    darkModeScript.src = "../../src/js/darkmode.js";
-                    document.body.appendChild(darkModeScript);
-                })
-                .catch(error => {
-                    console.error('Header not loaded:', error);
-                });
-        });
-    </script>
 </head>
 <body>
     <div id="header"></div>
@@ -87,18 +65,5 @@
             <button class="button">Listen</button>
         </div>
     </div>
-    
-    <footer class="footer">
-        <ul>
-            <li><a href="#">FAQ</a></p></li>
-            <li><a href="#">User Agreement</a></p></li>
-            <li><a href="#">Rules</a></p></li>
-        </ul>
-        <ul>
-            <li><a href="#">Copyright</a></p></li>
-            <li><a href="#">Privacy Policy</a></p></li>
-            <li><a href="#">Terms of Service</a></p></li>
-        </ul>
-    </footer>
 </body>
 </html>
